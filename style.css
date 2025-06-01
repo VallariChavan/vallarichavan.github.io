@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+  body, html {
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+    background-color: #222831; 
+    color: white; 
+  }
+  
+  h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  strong, p {
+  font-family: 'Monda', Courier;
+  font-weight: 600;
+  font-style: normal;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  }
+  div{
+    padding-top: 4px;
+  }
+  span{
+    color: #FF6500;
+    font-size: larger
+  }
+  
+  section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 2rem; 
+    box-sizing: border-box;
+    margin-bottom: 450px;
+  }
+  
+  /* Section 1 */
+  #section1 {
+    position: sticky;
+    display: flex;
+    top: 0;     /* overlap */
+    z-index: 1;
+    color: white;
+    flex-direction: column;
+    transition: opacity 0.5s ease;
+  }
+  
+.gradient-box {
+  width: 550px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#222831, #FF6500);
+  animation: pulse 3s infinite;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1rem;              /* Add padding inside the box */
+  box-sizing: border-box;     /* Make sure padding is included in width/height */
+  overflow: hidden;           /* Prevent content from spilling out */
+}
+  .gif-in-box {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .intro-title{
+    font-size: 1.3em;
+    font-family:'Quicksand', Courier, monospace;
+    font-weight: bold;
+    padding-top: 30px;
+  }
+
+  /* Scroll text */
+  .scroll-text {
+    margin-top: 2rem;
+    font-size: 1rem;
+    animation: bounce 2s infinite;
+  }
+  
+  #scroll-path {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; /* match or exceed page height */
+    z-index: 1;
+  }
+  
+  #dotted-path {
+    fill: none;
+    stroke: #FF6500;;
+    stroke-width: 7;
+    stroke-dasharray: 15 20; /* dotted pattern */
+    
+    filter: drop-shadow(0 0 6px white);
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.9; }
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+  }
+  
+  /* Section 2 */
+  #section2 {
+    z-index: 2;
+  }
+  
+/* Section 3 */
+#section3 {
+  padding: 40px 20px;
+  display: flex;
+  gap: 70px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.species-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+
+/* Species card */
+.species-journey {
+  z-index: 2;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image box */
+.image-panel {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+/* Info card */
+.info-panel {
+  width: 100%;
+  background-color: #51557E;
+  color: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.image-panel img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Timeline format */
+.points {
+  font-family: 'Monda', Courier;
+  margin-top: 16px;
+  border-left: 3px solid #FF6500;
+  padding-left: 14px;
+}
+.info-images {
+  display: flex;
+  gap: 12px;               /* space between the images */
+  margin: 16px 0;          /* space around the image block */
+  flex-wrap: wrap;         /* wrap on smaller screens */
+  justify-content: center;
+}
+
+.info-images img {
+  width: 45%;              /* each takes ~half the width */
+  max-width: 250px;        /* but not larger than this */
+  border-radius: 8px;
+}
+
+.description-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 8px;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+
+.image-description {
+  font-size: 0.7rem;
+  color: #aaa;
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+}
+.single-image-block {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.single-image-block img {
+  width: 80%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  box-shadow: 0 0 6px rgba(255, 101, 0, 0.3);
+}
+
+.image-description {
+  font-size: 0.7rem;
+  color: white;
+  text-align: center;
+}
+.points-div {
+  margin-bottom: 12px;
+}
+
+.title {
+  font-weight: bold;
+  color: #FF6500;
+  margin-bottom: 4px;
+}
+
+.content {
+  color: whitw;
+}
+.timeline-img{
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+.conclusion {
+  margin-top: 14px;
+  font-style: italic;
+  color: white;
+}
+
+/* Responsive fallback */
+@media (max-width: 768px) {
+  #section3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .species-journey {
+    width: 90%;
+  }
+}
+  
+    /* Section 4 */
+    #section4 {
+        z-index: 2;
+      }
+      .chart-text-flex {
+        display: flex;
+        flex-wrap: wrap; /* makes it responsive */
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0;
+      }
+      
+      .chart-text-flex iframe {
+        flex: 1 1 500px;
+        max-width: 100%;
+      }
+      
+      .chart-description {
+        flex: 1 1 400px;
+        color: white;
+        font-family: 'Monda', sans-serif;
+        font-size: 1rem;
+      }
+      @media (max-width: 768px) {
+        .chart-text-flex {
+          flex-direction: column;
+          align-items: stretch;
+        }
+      }
+     
+      .scroll-container {
+        display: flex;
+        gap: 16px;
+        padding: 20px;
+        overflow: hidden; /* hide overflow */
+        width: 100%;
+        box-sizing: border-box;
+      }
+      
+      .species-cards-wrapper {
+        display: flex;
+        gap: 16px;
+        animation: scroll-left 30s linear infinite;
+      }
+      
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      
+
+      .species-card {
+        flex: 0 0 auto;
+        background-color: #222831;
+        border-radius: 12px;
+        padding: 16px;
+        width: 220px;
+        box-shadow: 0 0 10px #FF6500;
+        transition: transform 0.7s;
+      }
+      
+      .species-card:hover {
+        transform: scale(1.05);
+      }
+      
+      .species-cards-wrapper:hover {
+        animation-play-state: paused;
+      }
+
+      .species-card img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+      
+      .species-card strong {
+        font-size: 1.1rem;
+        padding: 20px 20px;
+      }
+      
+      .species-card em {
+        font-size: 0.9rem;
+        display: block;
+        margin-bottom: 5px;
+      }
+      
+  .content-box {
+    max-width: 1000px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.05); /* translucent box */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(9px); /* gives frosted glass effect */
+    text-align: center;
+  }
+  .content-box p{
+    text-align: left;
+  }
